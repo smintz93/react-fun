@@ -3,14 +3,32 @@ import Projects from './Components/Projects'
 import './App.css';
 
 class App extends Component {
-
+  constructor(){
+    super()
+    this.state = {
+      projects: [
+        {
+          title: "Business Website",
+          category: "Web Design"
+        },
+        {
+          title: "Social App",
+          category: "Mobile Developemnt"
+        },
+        {
+          title: "Ecommerce Shopping Cart",
+          category: "Web Developemnt"
+        }
+      ]
+    }
+  }
 
 
   render() {
     return (
       <div className="App">
           My app
-          <Projects />
+          <Projects projects={this.state.projects} />
       </div>
     );
   }
